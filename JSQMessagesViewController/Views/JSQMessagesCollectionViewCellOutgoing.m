@@ -26,7 +26,11 @@
 {
     [super awakeFromNib];
     self.messageBubbleTopLabel.textAlignment = NSTextAlignmentRight;
-    self.cellBottomLabel.textAlignment = NSTextAlignmentRight;
+    self.messageBubbleImageView.layer.shadowColor = [UIColor colorWithWhite:0 alpha:0.1].CGColor;
+    self.messageBubbleImageView.layer.shadowOffset = CGSizeMake(0, 2);
+    self.messageBubbleImageView.layer.shadowOpacity = 1;
+    self.messageBubbleImageView.layer.shadowRadius = 2;
+    self.messageBubbleImageView.clipsToBounds = NO;
 }
 
 @end
